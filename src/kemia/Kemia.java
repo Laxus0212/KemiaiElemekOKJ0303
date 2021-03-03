@@ -92,7 +92,29 @@ public class Kemia {
     private void feladat7() {
        
         
+        int maxEv = 0;
+        int minEv = 0;
+        int elteltIdo = 0;
+        while(elemek.get(minEv).getEv().equals("Ókor")){
+            minEv++;
+        }
+        maxEv = Integer.parseInt(elemek.get(minEv+1).getEv());
+        minEv = Integer.parseInt(elemek.get(minEv).getEv());
+        elteltIdo = maxEv - minEv;
         
+            for (int i = 0; i < elemek.size()-1; i++) {
+                if(!elemek.get(i).getEv().equals("Ókor")){
+                    
+                    minEv = Integer.parseInt(elemek.get(i).getEv());
+                    maxEv = Integer.parseInt(elemek.get(i+1).getEv());
+                    int aktElteltIdo = maxEv - minEv;
+                    if(elteltIdo < aktElteltIdo){
+                        elteltIdo = aktElteltIdo;
+                    }
+                } 
+            }
+           
+        System.out.printf("7. feladat: %d ev volt a leghosszabb idoszak ket elem felfedezese kozott.\n", elteltIdo);
         
         
         
