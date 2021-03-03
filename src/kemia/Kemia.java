@@ -68,7 +68,17 @@ public class Kemia {
     
      private void feladat5() {
        
-         
+         Scanner sc = new Scanner(System.in);  
+        boolean ok;
+        String be;
+        //System.out.println(betu);
+        do{ System.out.print("5. feladat: Kérek egy vegyjelet: ");
+           be = sc.nextLine();
+           boolean betuk = be.matches("[a-zA-Z]+");           
+           boolean joHossz = be.length()==1 || be.length() == 2;
+           ok = betuk && joHossz;
+        }
+        while (!ok);
          
          
          
