@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Kemia {
     private List<String> sorok;
@@ -22,8 +23,8 @@ public class Kemia {
        beolvas();
        feladat3();
        feladat4();
-       feladat5();
-       feladat6();
+        String vegyjel = feladat5();
+       feladat6(vegyjel);
        feladat7();
        feladat8();
        
@@ -66,7 +67,7 @@ public class Kemia {
         
     }
     
-     private void feladat5() {
+     private String feladat5() {
        
          Scanner sc = new Scanner(System.in);  
         boolean ok;
@@ -79,17 +80,33 @@ public class Kemia {
            ok = betuk && joHossz;
         }
         while (!ok);
-         
+        return be;
          
          
          
          
     }
 
-    private void feladat6() {
-       
+    private void feladat6(String vegyjel) {
+        int i = 0;
+        int n = elemek.size();
+        String valasz = "";
         
+        while(i < n && !(elemek.get(i).getVj().equals(vegyjel))){
+            i++;            
+        }
+        if(i<n){
+                String nev = elemek.get(i).getNev();
+                int rsz = elemek.get(i).getRsz();
+                String ev = elemek.get(i).getEv();
+                String felf = elemek.get(i).getFelf();
+                valasz = "\tAz elem vegyjele: " + vegyjel + "\n\tAz elem neve: " + nev + "\n\tRendszáma: " + rsz +
+                        "\n\tFelefedezés éve: " + ev + "\n\tFelfedező: " + felf; 
         
+            }else{
+               valasz = "Nincs ilyen elem az adatforrásban!";            
+            }
+        System.out.println("6. feladat: Keresés\n" +valasz);
         
         
         
