@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Kemia {
     private List<String> sorok;
@@ -126,6 +128,31 @@ public class Kemia {
     private void feladat8() {
        
         
+        System.out.println("8. feladat: Statisztika");
+        
+        HashMap<String, Integer> halmaz = new HashMap<>();
+        
+        for (Felfedezesek elem : elemek) {
+            String kulcs = elem.getEv();
+            if(!halmaz.containsKey(kulcs)){
+                halmaz.put(kulcs, 1);
+            }else{
+                int ertek = halmaz.get(kulcs);
+                halmaz.put(kulcs, ++ertek);
+            }
+        }
+        
+        for (Map.Entry<String, Integer> elem : halmaz.entrySet()) {
+            String kulcs = elem.getKey();
+            Integer ertek = elem.getValue();
+            if (ertek > 3 && !(kulcs.equals("Ókor"))) {
+                System.out.printf("\t%s: %d db\n", kulcs, ertek);
+            }
+            
+        }
+        
+        
+            
         
         
         
