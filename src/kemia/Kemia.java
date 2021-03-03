@@ -29,6 +29,12 @@ public class Kemia {
 
     private void feladatok() throws IOException {
        beolvas();
+       feladat3();
+       feladat4();
+       feladat5();
+       feladat6();
+       feladat7();
+       feladat8();
        
     }
 
@@ -39,6 +45,73 @@ public class Kemia {
             String sor = sorok.get(i);
             elemek.add(new Felfedezesek(sor));
         }
+    }
+
+    private void feladat3() {
+       
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+
+    private void feladat4() {
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+     private void feladat5() {
+       
+         
+         
+         
+         
+         
+         
+    }
+
+    private void feladat6() {
+       
+        
+        
+        
+        
+        
+    }
+
+   
+    private void feladat7() {
+       
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+
+    private void feladat8() {
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
 }
