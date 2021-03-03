@@ -15,18 +15,7 @@ public class Kemia {
     
     
     public static void main(String[] args) throws IOException {
-        new Kemia().feladatok();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        new Kemia().feladatok();   
     }
 
     private void feladatok() throws IOException {
@@ -50,7 +39,7 @@ public class Kemia {
     }
 
     private void feladat3() {
-       
+        System.out.printf("3. feladat: Elemek száma: %d\n", elemek.size());
         
         
         
@@ -62,7 +51,13 @@ public class Kemia {
     }
 
     private void feladat4() {
-        
+        int okoriFelf = 0;
+        for (Felfedezesek elem : elemek) {
+            if (elem.getEv().equals("Ókor")) {
+                okoriFelf++;
+            }
+        }
+        System.out.printf("4. feladat: Felfedezéssek száma az ókorban: %d\n", okoriFelf);
         
         
         
